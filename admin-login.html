@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Logga in</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main>
+    <h1>Endast för personal</h1>
+    <h2>Logga in för att hantera menyn</h2>
+    <div class="login">
+        <h3>Logga in:</h3>
+        <form class="loginForm">
+            <input type="text" id="username" placeholder="Användarnamn" required>
+            <input type="password" id="password" placeholder="Lösenord" required>
+            <button class="login_btn" type="submit">Logga in</button>
+        </form>
+    </div>
+    <div class="create_user">
+        <h2>Ny på jobbet? Skapa en användare</h2>
+        <h3>Skapa användare:</h3>
+        <form class="registerForm">
+            <input type="text" id="regUsername" placeholder="Användarnamn" required>
+            <input type="password" id="regPassword" placeholder="Lösenord" required>
+            <button class="create_btn" type="submit">Skapa användare</button>
+          </form>
+    </div>
+    </main>
+    <script src="js/login.js"></script>
+</body>
+</html>
