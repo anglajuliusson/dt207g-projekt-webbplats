@@ -13,6 +13,36 @@ body {
     align-items: center;
     text-align: center;
 }
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    background-color: rgb(39, 39, 39);
+  }
+  header h1 {
+    font-size: 24px;
+    margin: 0;
+    color: goldenrod;
+  }
+  nav {
+    margin-right: 5em;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+  } 
+  nav a, li {
+    text-decoration: none;
+    color: goldenrod;
+    font-weight: 500;
+    transition: color 0.2s ease;
+  }
+
+/* Footer */
 footer {
     margin-top: 5em;
 }
