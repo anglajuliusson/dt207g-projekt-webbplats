@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(218, 218, 218);
+}
+h1 {
+    color: goldenrod;
+    margin-top: 2em;
+    margin-bottom: 20px;
+  }
+  .login, .create_user {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  input {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    border-radius: 10px;
+    border: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+  .login_btn, .logout_btn {
+    background-color: goldenrod;
+    border: solid goldenrod;
+  }
+  .logout_btn {
+    margin: 10em;
+  }
+  .create_btn {
+    background-color: rgb(172, 131, 28);
+    border: solid rgb(172, 131, 28);
+  }
+  @media (max-width: 600px) {
+    h2 {
+        font-size: medium;
+    }
+    .login, .create_user {
+        max-width: 300px;
+        margin: auto;
+        text-align: left;
+        margin-top: 3em;
+        margin-bottom: 3em;
+    
+    }
+}
