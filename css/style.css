@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+}
+body {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+footer {
+    margin-top: 5em;
+}
+.footer_info {
+    display: grid;
+    grid-template-areas: 
+    "name name name"
+    "adress info admin"
+    "task task task";
+    grid-template-rows: auto;
+    padding: 3em;
+    background-color: rgb(39, 39, 39);
+}
+.footer_info p {
+    color: white;
+}
+.footer_info a {
+    color: white;
+    text-decoration: none;
+}
+.name {
+    grid-area: name;
+    text-align: left;
+    margin-bottom: 1em;
+    font-size: larger;
+    color: goldenrod !important;
+}
+.adress {
+    grid-area: adress;
+    text-align: left;
+}
+.contact {
+    grid-area: info;
+    text-align: left;
+}
+.for_admin {
+    grid-area: admin;
+}
+.task_info {
+    background-color: rgb(19, 19, 19);
+    padding: 2em;
+}
+.task {
+    grid-area: task;
+    color: white;
+}
