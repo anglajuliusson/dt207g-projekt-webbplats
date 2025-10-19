@@ -12,6 +12,10 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: antiquewhite;
+}
+main {
+    background-color: rgb(255, 249, 242);
 }
 /* Header */
 header {
@@ -45,6 +49,9 @@ header {
 /* Footer */
 footer {
     margin-top: 5em;
+}
+.footer_menu {
+    margin-top: 0 !important;
 }
 .footer_info {
     display: grid;
