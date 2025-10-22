@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hantera menyn</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <main>
+        <h1>Hantera menyn</h1>
+        <div class="create_dish">
+        <h2>Lägg till ny rätt</h2>
+        <form class="create_form">
+            <input type="text" id="name" placeholder="Namn" required>
+            <input type="text" id="description" placeholder="Beskrivning" required>
+            <input type="number" id="price" placeholder="Pris (kr)" required>
+            <select id="category" required>
+                <option value="" disabled selected>Välj kategori</option>
+                <option value="förrätt">Förrätt</option>
+                <option value="huvudrätt">Huvudrätt</option>
+                <option value="efterrätt">Efterrätt</option>
+              </select>
+            <button type="submit">Lägg till</button>
+        </form>
+        </div>
+        <div class="menu">
+            <h2>Befintliga rätter</h2>
+            <h2>FÖRRÄTTER<br>
+                STARTERS</h2>
+            <ul id="starters">
+              <li>Laddar förrätter...</li>
+            </ul>
+        </div>
+          <div>
+            <h2>HUVUDRÄTTER<br>
+                MAINS</h2>
+            <ul id="mains">
+              <li>Laddar huvudrätter...</li>
+            </ul>
+        </div>
+      
+          <div>
+            <h2>EFTERRÄTTER<br>
+                DESSERTS</h2>
+            <ul id="desserts">
+              <li>Laddar efterrätter...</li>
+            </ul>
+        </div>
+        <button class="logout_btn">Logga ut</button>
+    </main>
+    <script src="js/login.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/menu.js"></script>
+</body>
+</html>
