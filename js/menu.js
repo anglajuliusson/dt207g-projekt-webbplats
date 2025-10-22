@@ -1,5 +1,5 @@
 // Funktion som laddar rätter från en viss kategori och skriver ut dem i en HTML-lista
-async function loadCategory(category, elementId) {
+async function loadCategory(category, elementId, isAdmin = true) {
     const list = document.getElementById(elementId); // Hämtar elementet där rätterna ska skrivas ut
   
     try {
@@ -24,6 +24,18 @@ async function loadCategory(category, elementId) {
           <p>${dish.description}</p>
           <p><strong>${dish.price} kr</strong></p>
         `;
+        li.dataset.id = dish._id;
+
+      // Lägg till admin-knappar
+      if (isAdmin) {
+        const adminBtns = document.createElement("div");
+        adminBtns.classList.add("admin-buttons");
+        adminBtns.innerHTML = `
+          <button onclick="editDish('${dish._id}', '${category}', ${JSON.stringify(dish).replace(/"/g, '&quot;')})">Uppdatera</button>
+          <button onclick="deleteDish('${dish._id}', '${category}')">Ta bort</button>
+        `;
+        li.appendChild(adminBtns);
+      }
         list.appendChild(li);
       });
   
@@ -33,6 +45,6 @@ async function loadCategory(category, elementId) {
   }
   
   // Ladda alla kategorier
-  loadCategory("förrätt", "starters"); // Laddar alla förrätter till elementet med id="startsers"
-  loadCategory("huvudrätt", "mains"); // Laddar alla huvudrätter till elementet med id="mains"
-  loadCategory("efterrätt", "desserts"); // Laddar alla efterrätter till elementet med id="desserts"
+  loadCategory("förrätt", "starters", true); // Laddar alla förrätter till elementet med id="startsers"
+  loadCategory("huvudrätt", "mains", true); // Laddar alla huvudrätter till elementet med id="mains"
+  loadCategory("efterrätt", "desserts", true); // Laddar alla efterrätter till elementet med id="desserts"
