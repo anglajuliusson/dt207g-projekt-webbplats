@@ -33,9 +33,8 @@ main {
   ul {
     list-style: none;
     padding: 0;
-    display: grid;
-    gap: 1.5em;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin: 0;
+    display: block;
   }
   #starters li, #mains li, #desserts li {
     padding: 1.5em;
@@ -50,6 +49,8 @@ main {
     font-size: 0.95em;
     line-height: 1.4;
     color: #555;
+    max-width: 300px;
+    margin: auto;
   }
   ul li strong {
     display: block;
