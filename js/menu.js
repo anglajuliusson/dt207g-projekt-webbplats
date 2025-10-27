@@ -1,6 +1,10 @@
 // Funktion som laddar rätter från en viss kategori och skriver ut dem i en HTML-lista
-async function loadCategory(category, elementId, isAdmin = true) {
+async function loadCategory(category, elementId) {
     const list = document.getElementById(elementId); // Hämtar elementet där rätterna ska skrivas ut
+
+    // Kontrollera om inloggad
+    const userToken = sessionStorage.getItem("token");
+    const isAdmin = !!userToken; // true om token finns, false annars
   
     try {
       // Anrop till API:t för att hämta rätter inom en viss kategori
@@ -45,6 +49,6 @@ async function loadCategory(category, elementId, isAdmin = true) {
   }
   
   // Ladda alla kategorier
-  loadCategory("förrätt", "starters", true); // Laddar alla förrätter till elementet med id="startsers"
-  loadCategory("huvudrätt", "mains", true); // Laddar alla huvudrätter till elementet med id="mains"
-  loadCategory("efterrätt", "desserts", true); // Laddar alla efterrätter till elementet med id="desserts"
+  loadCategory("förrätt", "starters"); // Laddar alla förrätter till elementet med id="startsers"
+  loadCategory("huvudrätt", "mains"); // Laddar alla huvudrätter till elementet med id="mains"
+  loadCategory("efterrätt", "desserts"); // Laddar alla efterrätter till elementet med id="desserts"
