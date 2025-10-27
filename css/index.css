@@ -1,0 +1,85 @@
+main {
+    padding: 3em;
+    text-align: center;
+}
+h3 {
+    margin-top: 2em;
+}
+main p {
+    max-width: 400px;
+    width: 100%;
+    margin: auto;
+}
+.header_img {
+    max-width: 100%;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+}
+.hero-img {
+    width: 100vw;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 4em;
+}
+.hero-text h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2em;
+}
+.hero-text a {
+    text-decoration: none;
+    color: white;
+    background-color: goldenrod;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+.values h2, .team h2 {
+    margin-top: 2em;
+    color: goldenrod;
+}
+.team {
+    margin-top: 5em;
+}
+.chef_img {
+    margin-top: 2em;
+    max-width: 700px;
+}
+@media (max-width: 600px) {
+    .header_img, .chef_img {
+        max-width: 100%;
+    }
+    .hero-text {
+        padding: 15px;
+        width: 95%;
+    }
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+    .hero-text p {
+        font-size: 0.7rem;
+    }
+    .hero-text a {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
