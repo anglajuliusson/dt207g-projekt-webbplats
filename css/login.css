@@ -27,7 +27,7 @@ h1 {
     margin-top: 10px;
     border-radius: 10px;
   }
-  .login_btn, .logout_btn {
+  .login_btn {
     background-color: goldenrod;
     border: solid goldenrod;
   }
