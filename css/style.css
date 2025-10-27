@@ -102,3 +102,27 @@ footer {
     grid-area: task;
     color: white;
 }
+@media (max-width: 600px) {
+    header {
+        display: grid;
+        grid-template-areas: 
+        "h1"
+        "nav";
+        grid-template-rows: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    header h1 {
+        grid-area: h1;
+        margin-bottom: 1em;
+    }
+    header nav {
+        grid-area: nav;
+        text-align: center;
+        margin: auto;
+    }
+    footer p, footer a {
+        font-size: x-small;
+    }
+}
