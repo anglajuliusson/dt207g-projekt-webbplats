@@ -35,8 +35,8 @@ async function loadCategory(category, elementId) {
         const adminBtns = document.createElement("div");
         adminBtns.classList.add("admin-buttons");
         adminBtns.innerHTML = `
-          <button onclick="editDish('${dish._id}', '${category}', ${JSON.stringify(dish).replace(/"/g, '&quot;')})">Uppdatera</button>
-          <button onclick="deleteDish('${dish._id}', '${category}')">Ta bort</button>
+          <button class="edit-btn" onclick="editDish('${dish._id}', '${category}', ${JSON.stringify(dish).replace(/"/g, '&quot;')})">Uppdatera</button>
+          <button class="delete-btn" onclick="deleteDish('${dish._id}', '${category}')">Ta bort</button>
         `;
         li.appendChild(adminBtns);
       }
